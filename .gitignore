@@ -108,3 +108,6 @@ Desktop.ini
 *.*~
 *~
 .merge_file*
+
+
+*/.idea/**
