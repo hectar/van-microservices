@@ -1,0 +1,14 @@
+
+server:
+  port: $8888
+
+logging:
+  level:
+    com.netflix.discovery: off
+
+spring:
+  platform:
+    config:
+      server:
+      uri: ${conf:https://github.com/hectar/vjhipster
+
