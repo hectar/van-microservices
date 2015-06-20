@@ -1,5 +1,8 @@
 package com.va.datalist.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Created by vaneet_sharma
  */
