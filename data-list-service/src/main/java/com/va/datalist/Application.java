@@ -2,6 +2,7 @@ package com.va.datalist;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 /**
  * Created by hectar on 20/06/15.
@@ -9,7 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class);
+        ApplicationContext ctx = SpringApplication.run(Application.class);
+//        DataRepository dataRepository = ctx.getBean("dataRepository");
+
     }
 
 
