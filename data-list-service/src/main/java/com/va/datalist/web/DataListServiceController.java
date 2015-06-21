@@ -1,7 +1,7 @@
 package com.va.datalist.web;
 
 import com.va.datalist.domain.Data;
-import com.va.datalist.repository.DataRepository;
+import com.va.datalist.service.DataListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DataListServiceController {
 
     @Autowired
-    private DataRepository dataRepository;
+    private DataListService dataListService;
 
     @RequestMapping("/")
     @ResponseBody
@@ -27,12 +27,7 @@ public class DataListServiceController {
     @RequestMapping("/datalist")
     @ResponseBody
     public Iterable<Data> getDataList() {
-        Data data = new Data();
-        data.setId("1");
-        data.setName("test data");
-        dataRepository.save(data);
-
-        return this.dataRepository.findAll();
+        return dataListService.getData();
     }
 
 
